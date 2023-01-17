@@ -7,7 +7,7 @@
 
 #include "gestion_produit.h"
 
-/**fonction d'affichage de produit
+/*Fonction d'affichage de produit
 */
 void affiche_produit(PROD prd){
     printf("%s|%s|%f\n",prd.nom, prd.designation, prd.prix);
@@ -54,23 +54,57 @@ void saisir_liste_produit(int nb, PROD * listeProd){
 }
 
 
-void inserer_un_produit(int nb,PROD* listeProduit, PROD new_prod){
+void inserer_un_produit(int nb,PROD* listeProduit, PROD new_prod)
+{
+    int i = 0;
+    int position = 1;
+    
+    printf("Veuillez rentrer les informations concernant le nouveau produit \n");
+    new_prod = saisir_produit();
+    
+    for(i = nb; i >= position; i-- )
+    {
+        listeProduit[i] = listeProduit [i-1];
+    }
+    listeProduit[position - 1] = new_prod;
+    nb = nb + 1 ;
+    
+    printf("\nAffichage avec ajout : \n");
+    affiche_liste_produit(listeProduit,nb);
+    //Sauvegarde à ajouter
+}
 
-//TO DO
+int rechercher_produit(int nb, PROD*listProduit, PROD prd_recheche )
+{
+    int i = 0;
+    
+    printf("\nQuelle est le nom de votre produit rechercher : ");
+    scanf("%s", prd_recheche.nom);
+    
+    while(i < nb && strcmp(prd_recheche.nom, listProduit[i].nom) != 0)
+    {
+        i++;
+    }
+    
+    if (i < nb)
+    {
+        return i+1;
+    }else{
+        return 0;
+    }
 
+}
+
+
+int supprimer_produit(int nb, PROD*listProduit, PROD prd_recheche )
+{
+    int posi = rechercher_produit(nb, listProduit, prd_recheche);
+    
+    
+
+    return 0;
 }
 
 //rechercher un produit dans une liste de produit
 //retourne l'index du produit dans le tableau listeProduit
 //sinon -1
-int rechercher_produit(int nb, PROD*listProduit, PROD prd_recheche ){
-//to DO
-
-    return 0;
-}
-
-int supprimer_produit(int nb, PROD*listProduit, PROD prd_recheche ){
-
-//to do
-    return 0;
-}

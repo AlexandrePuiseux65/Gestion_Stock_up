@@ -9,7 +9,6 @@
 
 void sauvegarde(PROD* listProduit, int nb)
 {
-    int i = 0;
     // Création et ouverture d'un fichier
     FILE* sauvegarde = NULL;
     sauvegarde = fopen("sauvegarde.txt", "a+");
