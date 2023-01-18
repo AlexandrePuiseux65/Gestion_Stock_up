@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #define MAX_SIZE_TAB_PRODUIT 100
 
@@ -48,7 +49,6 @@ struct Fournisseur{
     ADRE Adresse_fourniseur;
     long telephone;
     PROD Produit[10];
-    
 };typedef struct Fournisseur FOUR;
 
 
@@ -75,5 +75,8 @@ void inserer_un_produit(int nb,PROD* listeProduit, PROD new_prod);
 int rechercher_produit(int nb, PROD*listProduit, PROD prd_recheche );//rechercher un produit dans une liste de produit
 int supprimer_produit(int nb, PROD*listProduit, PROD prd_recheche );
 void copieProd(PROD prdSource, PROD*prDdestination);
+
+//Code Bonnus
+void Chargement();
 
 #endif // GESTION_PRODUIT_H_INCLUDED

@@ -98,11 +98,15 @@ int rechercher_produit(int nb, PROD*listProduit, PROD prd_recheche )
 
 int supprimer_produit(int nb, PROD*listProduit, PROD prd_recheche )
 {
+    int i = 0;
     int posi = rechercher_produit(nb, listProduit, prd_recheche);
     
+    for(i = posi; i<0; i--)
+    {
+        listProduit[i] = listProduit[i-1];
+    }
     
-
-    return 0;
+    return nb;
 }
 
 //rechercher un produit dans une liste de produit

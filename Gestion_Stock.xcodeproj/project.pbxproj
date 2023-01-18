@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D61142F2978326600CCE9CD /* ASCII_plus.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142E2978326600CCE9CD /* ASCII_plus.c */; };
 		8DBF91B7296D5D1D000CA18C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91B6296D5D1D000CA18C /* main.c */; };
 		8DBF91BF296D5D3D000CA18C /* gestion_produit.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91BE296D5D3D000CA18C /* gestion_produit.c */; };
 		8DBF91C12974B9DB000CA18C /* Tri_par_permu.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91C02974B9DB000CA18C /* Tri_par_permu.c */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D61142E2978326600CCE9CD /* ASCII_plus.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ASCII_plus.c; sourceTree = "<group>"; };
 		8DBF91B3296D5D1D000CA18C /* Gestion_Stock */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Gestion_Stock; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBF91B6296D5D1D000CA18C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		8DBF91BD296D5D3D000CA18C /* gestion_produit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gestion_produit.h; path = "/Users/alexandrepuiseux/Desktop/Programme en C /Gestion_Stock/gestion_produit.h"; sourceTree = "<absolute>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				8DBF91C02974B9DB000CA18C /* Tri_par_permu.c */,
+				8D61142E2978326600CCE9CD /* ASCII_plus.c */,
 				8DBF91BD296D5D3D000CA18C /* gestion_produit.h */,
 				8DBF91C22974C92D000CA18C /* Fichier_sauvegarde.c */,
 				8DBF91BE296D5D3D000CA18C /* gestion_produit.c */,
@@ -125,6 +128,7 @@
 				8DBF91C12974B9DB000CA18C /* Tri_par_permu.c in Sources */,
 				8DBF91C32974C92D000CA18C /* Fichier_sauvegarde.c in Sources */,
 				8DBF91B7296D5D1D000CA18C /* main.c in Sources */,
+				8D61142F2978326600CCE9CD /* ASCII_plus.c in Sources */,
 				8DBF91BF296D5D3D000CA18C /* gestion_produit.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
