@@ -48,9 +48,14 @@ void tri_liste_produit(int nb, PROD* listeProduit)
             //Permutation des valeurs
             if(posimax != i)
             {
+                /*
                 prdTmp.prix = listeProduit[i].prix;
                 listeProduit[i].prix = listeProduit[posimax].prix;
                 listeProduit[posimax].prix = prdTmp.prix;
+                 */
+                copieProd(listeProduit[i],&prdTmp);
+                copieProd(listeProduit[posimax],&listeProduit[i]);
+                copieProd(prdTmp,&listeProduit[posimax]);
             }
         }
     }else
@@ -78,7 +83,6 @@ void tri_liste_produit(int nb, PROD* listeProduit)
     affiche_liste_produit(listeProduit, nb);
 
 }
-
 /*
  Code qui permet de copier une chaine de caratère dans une autre chaine de caractère
  */

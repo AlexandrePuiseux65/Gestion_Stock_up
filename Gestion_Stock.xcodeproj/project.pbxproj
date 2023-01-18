@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D563B732992F957001F80EF /* gestion_adresse.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D563B722992F957001F80EF /* gestion_adresse.c */; };
+		8D563B75299302A6001F80EF /* Menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D563B74299302A6001F80EF /* Menu.c */; };
+		8D563B78299308BB001F80EF /* gestion_fourniseur.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D563B77299308BB001F80EF /* gestion_fourniseur.c */; };
+		8D563B7A2993AF2C001F80EF /* gestion_date.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D563B792993AF2C001F80EF /* gestion_date.c */; };
 		8D61142F2978326600CCE9CD /* ASCII_plus.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142E2978326600CCE9CD /* ASCII_plus.c */; };
 		8DBF91B7296D5D1D000CA18C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91B6296D5D1D000CA18C /* main.c */; };
 		8DBF91BF296D5D3D000CA18C /* gestion_produit.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF91BE296D5D3D000CA18C /* gestion_produit.c */; };
@@ -27,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D563B722992F957001F80EF /* gestion_adresse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gestion_adresse.c; sourceTree = "<group>"; };
+		8D563B74299302A6001F80EF /* Menu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Menu.c; sourceTree = "<group>"; };
+		8D563B77299308BB001F80EF /* gestion_fourniseur.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gestion_fourniseur.c; sourceTree = "<group>"; };
+		8D563B792993AF2C001F80EF /* gestion_date.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gestion_date.c; sourceTree = "<group>"; };
 		8D61142E2978326600CCE9CD /* ASCII_plus.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ASCII_plus.c; sourceTree = "<group>"; };
 		8DBF91B3296D5D1D000CA18C /* Gestion_Stock */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Gestion_Stock; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBF91B6296D5D1D000CA18C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -47,14 +55,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8DBF91AA296D5D1D000CA18C = {
+		8D563B7B2993AF46001F80EF /* Gestion */ = {
+			isa = PBXGroup;
+			children = (
+				8D563B792993AF2C001F80EF /* gestion_date.c */,
+				8D563B722992F957001F80EF /* gestion_adresse.c */,
+				8D563B77299308BB001F80EF /* gestion_fourniseur.c */,
+				8DBF91BE296D5D3D000CA18C /* gestion_produit.c */,
+			);
+			path = Gestion;
+			sourceTree = "<group>";
+		};
+		8D563B7C2993AF68001F80EF /* Tri */ = {
 			isa = PBXGroup;
 			children = (
 				8DBF91C02974B9DB000CA18C /* Tri_par_permu.c */,
-				8D61142E2978326600CCE9CD /* ASCII_plus.c */,
-				8DBF91BD296D5D3D000CA18C /* gestion_produit.h */,
+			);
+			path = Tri;
+			sourceTree = "<group>";
+		};
+		8D563B7D2993AF7B001F80EF /* Sauvegarde */ = {
+			isa = PBXGroup;
+			children = (
 				8DBF91C22974C92D000CA18C /* Fichier_sauvegarde.c */,
-				8DBF91BE296D5D3D000CA18C /* gestion_produit.c */,
+			);
+			path = Sauvegarde;
+			sourceTree = "<group>";
+		};
+		8D563B7E2993AFA3001F80EF /* ASCII_dessin */ = {
+			isa = PBXGroup;
+			children = (
+				8D61142E2978326600CCE9CD /* ASCII_plus.c */,
+			);
+			path = ASCII_dessin;
+			sourceTree = "<group>";
+		};
+		8DBF91AA296D5D1D000CA18C = {
+			isa = PBXGroup;
+			children = (
+				8D563B7E2993AFA3001F80EF /* ASCII_dessin */,
+				8D563B7D2993AF7B001F80EF /* Sauvegarde */,
+				8D563B7C2993AF68001F80EF /* Tri */,
+				8D563B7B2993AF46001F80EF /* Gestion */,
+				8D563B74299302A6001F80EF /* Menu.c */,
+				8DBF91BD296D5D3D000CA18C /* gestion_produit.h */,
 				8DBF91B6296D5D1D000CA18C /* main.c */,
 				8DBF91B4296D5D1D000CA18C /* Products */,
 			);
@@ -126,10 +170,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBF91C12974B9DB000CA18C /* Tri_par_permu.c in Sources */,
+				8D563B732992F957001F80EF /* gestion_adresse.c in Sources */,
+				8D563B75299302A6001F80EF /* Menu.c in Sources */,
 				8DBF91C32974C92D000CA18C /* Fichier_sauvegarde.c in Sources */,
+				8D563B7A2993AF2C001F80EF /* gestion_date.c in Sources */,
 				8DBF91B7296D5D1D000CA18C /* main.c in Sources */,
 				8D61142F2978326600CCE9CD /* ASCII_plus.c in Sources */,
 				8DBF91BF296D5D3D000CA18C /* gestion_produit.c in Sources */,
+				8D563B78299308BB001F80EF /* gestion_fourniseur.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,73 +4,62 @@
 //
 //  Created by Alexandre Puiseux on 10/01/2023.
 //
-
 #include "gestion_produit.h"
 
 int main()
 {
     //Déclaration des variables
-    PROD listeProd[MAX_SIZE_TAB_PRODUIT];
-    PROD new_prod ;
-    PROD prd_recherche ;
+    FOUR Fourniseur [MAX_SIZE_TAB_PRODUIT];
     
     int nb;
     int result;
     int choix;
     int fin = 1;
     
-    do
-    {
-        printf("Introduire le nombre de produit : ");
-        scanf("%d",&nb);
-    }
-    while(nb<=0||nb>MAX_SIZE_TAB_PRODUIT);//Blindage
+    affiche_gestion_Fourniseur ();
+    printf("\n\n\n");
     
-    //saisie des données
-    saisir_liste_produit(nb,listeProd);
+    Chargement();
     
     while(fin != 0)
     {
         do {
             printf("\nQue voulez vous faire ?\n");
-            printf("\t 1 - Afficher la liste \n");
-            printf("\t 2 - Trier la liste \n");
-            printf("\t 3 - Sauvegarder la liste \n");
-            printf("\t 4 - Ajouter un nouveau produit \n");
-            printf("\t 5 - Rechercher un produit \n");
-            printf("\t 6 - Quitter\n");
-            printf("\t 7 - Test : Chargement\n");
+            printf("\t 1 - Afficher la liste des fourniseurs \n");
+            printf("\t 2 - Trier la liste des fourniseurs \n");
+            printf("\t 3 - Sauvegarder la nouvelle liste des fourniseurs \n");
+            printf("\t 4 - Ajouter un nouveau fourniseur \n");
+            printf("\t 5 - Rechercher un fourniseur \n");
+            printf("\t 6 - Supprimer un fourniseur \n");
+            printf("\t 7 - Afficher les produits d'un fourniseur \n");
+            printf("\t 8 - Quitter\n");
             scanf("%d", &choix);
-        }while(choix <= 0 || choix >= 10);
+        }while(choix <= 0 || choix >= 10 );
         
         switch(choix)
         {
-            case 1 : affiche_liste_produit(listeProd,nb);
+            case 1 :
                 break;
-            case 2 : tri_liste_produit(nb, listeProd);
+            case 2 :
                 break;
-            case 3 : sauvegarde(listeProd, nb);
+            case 3 :
                 break;
-            case 4 : inserer_un_produit(nb, listeProd, new_prod);
+            case 4 :
                 break;
-            case 5 :result = rechercher_produit(nb, listeProd, prd_recherche);
-                if (result != 0)
-                {
-                    printf("\nLe produit que vous rechercher est a la position numero : %d ", result);
-                }else{
-                    printf("\nLe produit que vous rechercher est a la position numero : %d ", result);
-                }
-            case 6 : printf("Merci :)\n");
-                fin = 0;
+            case 5 :
                 break;
-            case 7 : Chargement();
+            case 6 :
+                break;
+            case 7 :printf("\t\nQuelle fourniseur souhaitez vous voir les produits ? ");
+                scanf("%d", &Fourniseur->code);
+                
+                break;
+            case 8 :
                 break;
             default: printf("\nPas encore fait ...");
                 break;
         }
         
     }
-    //TO FINISH
-
     return 0;
 }

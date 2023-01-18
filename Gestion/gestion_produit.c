@@ -4,7 +4,6 @@
 //
 //  Created by Alexandre Puiseux on 10/01/2023.
 //
-
 #include "gestion_produit.h"
 
 /*Fonction d'affichage de produit
@@ -42,6 +41,7 @@ PROD saisir_produit(void){
 
     return prdtmp;
 }
+
 /*
 Fonction de saisie d'une liste de produit de taille nb
 */
@@ -77,38 +77,39 @@ void inserer_un_produit(int nb,PROD* listeProduit, PROD new_prod)
 int rechercher_produit(int nb, PROD*listProduit, PROD prd_recheche )
 {
     int i = 0;
+    int result = -1;
     
-    printf("\nQuelle est le nom de votre produit rechercher : ");
-    scanf("%s", prd_recheche.nom);
     
-    while(i < nb && strcmp(prd_recheche.nom, listProduit[i].nom) != 0)
+    while((i < nb && strcmp(prd_recheche.nom, listProduit[i].nom) != 0 ))
     {
         i++;
     }
     
     if (i < nb)
     {
-        return i+1;
-    }else{
-        return 0;
+        result = i;
     }
-
+    return result;
 }
 
 
 int supprimer_produit(int nb, PROD*listProduit, PROD prd_recheche )
 {
     int i = 0;
+    int result = 0;
     int posi = rechercher_produit(nb, listProduit, prd_recheche);
     
-    for(i = posi; i<0; i--)
-    {
-        listProduit[i] = listProduit[i-1];
+    if(posi!=-1){
+        for(i = posi; i<0; i--)
+        {
+            copieProd(listProduit[i],&listProduit[i-1]);
+        }
+        nb = nb - 1;
+        result = 1;
+//        printf("\n Voici la liste actuelle : \n");
+//        affiche_liste_produit(listProduit,nb);
     }
     
-    return nb;
+    return result;
 }
 
-//rechercher un produit dans une liste de produit
-//retourne l'index du produit dans le tableau listeProduit
-//sinon -1
