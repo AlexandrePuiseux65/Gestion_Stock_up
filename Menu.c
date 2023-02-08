@@ -7,10 +7,9 @@
 
 #include "gestion_produit.h"
 
-void menu_produit (void)
+void menu_produit (PROD listeProd[MAX_SIZE_TAB_PRODUIT])
 {
     //Déclaration des variables //FOU Fourniseur[]; int nb_fourniseur
-    PROD listeProd[MAX_SIZE_TAB_PRODUIT];
     PROD new_prod ;
     PROD prd_recherche ;
     

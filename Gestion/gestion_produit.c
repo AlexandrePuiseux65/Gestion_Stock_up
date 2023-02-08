@@ -9,7 +9,7 @@
 /*Fonction d'affichage de produit
 */
 void affiche_produit(PROD prd){
-    printf("%s|%s|%f\n",prd.nom, prd.designation, prd.prix);
+    printf("\t\t• %s | %s | %f \n",prd.nom, prd.designation, prd.prix);
 }
 /*
 Fonction d'affichage d'une liste de produit de taille nb
@@ -17,6 +17,7 @@ Cette fonction affiche ‡ partir d'un tableau de produit "listeProd"
 PassÈ en argument de la fonction
 le type de retour est vide (void)
 */
+
 void affiche_liste_produit(PROD* listeProd, int nb){
     int i;
     for(i =0; i< nb;i++ ){
